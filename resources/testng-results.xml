@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="27" passed="27">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24900" started-at="2017-09-01T12:51:00Z" finished-at="2017-09-01T12:51:25Z">
+    <groups>
+      <group name="Recount">
+        <method signature="InventoryAuditServiceRunner.fixtureType()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="fixtureType" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.offeringPrice()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="offeringPrice" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.recountDept()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="recountDept" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.recount_department_detail()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="recount_department_detail" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.basicInfo()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="basicInfo" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.annual()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="annual" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+      </group> <!-- Recount -->
+      <group name="auditPrecount">
+        <method signature="InventoryAuditServiceRunner.auditDeptDetail()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="auditDeptDetail" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.mismatch()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="mismatch" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.auditDepartments()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="auditDepartments" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.auditSideCounter()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="auditSideCounter" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+      </group> <!-- auditPrecount -->
+      <group name="RecountDiscrepency">
+        <method signature="InventoryAuditServiceRunner.recountReleaseDepartments()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="recountReleaseDepartments" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.recountRelease()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="recountRelease" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.submitRecountMismatch()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="submitRecountMismatch" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.annual()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="annual" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+      </group> <!-- RecountDiscrepency -->
+      <group name="Precount">
+        <method signature="InventoryAuditServiceRunner.countGetDepartMent()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="countGetDepartMent" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.quantity()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="quantity" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.printRequest()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="printRequest" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.getProductOffering()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="getProductOffering" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.countDepartmentLocation()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="countDepartmentLocation" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+      </group> <!-- Precount -->
+      <group name="AssignPrecount">
+        <method signature="InventoryAuditServiceRunner.ALGetSectionToModularAssignment()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="ALGetSectionToModularAssignment" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.getIMSItemInfoForUpc()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="getIMSItemInfoForUpc" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.getProductLocation()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="getProductLocation" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.locationAPI()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="locationAPI" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.getDepartmentsForStore()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="getDepartmentsForStore" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.Audits()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="Audits" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+        <method signature="InventoryAuditServiceRunner.ALValidateZoneAisleSectionByID()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="ALValidateZoneAisleSectionByID" class="com.walmart.qe.tests.InventoryAuditServiceRunner"/>
+      </group> <!-- AssignPrecount -->
+    </groups>
+    <test name="Default test" duration-ms="24900" started-at="2017-09-01T12:51:00Z" finished-at="2017-09-01T12:51:25Z">
+      <class name="com.walmart.qe.tests.InventoryAuditServiceRunner">
+        <test-method status="PASS" signature="ALGetSectionToModularAssignment()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="ALGetSectionToModularAssignment" duration-ms="6692" started-at="2017-09-01T18:21:00Z" finished-at="2017-09-01T18:21:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ALGetSectionToModularAssignment -->
+        <test-method status="PASS" signature="auditDeptDetail()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="auditDeptDetail" duration-ms="860" started-at="2017-09-01T18:21:06Z" finished-at="2017-09-01T18:21:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- auditDeptDetail -->
+        <test-method status="PASS" signature="countGetDepartMent()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="countGetDepartMent" duration-ms="608" started-at="2017-09-01T18:21:07Z" finished-at="2017-09-01T18:21:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- countGetDepartMent -->
+        <test-method status="PASS" signature="fixtureType()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="fixtureType" duration-ms="950" started-at="2017-09-01T18:21:08Z" finished-at="2017-09-01T18:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fixtureType -->
+        <test-method status="PASS" signature="getIMSItemInfoForUpc()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="getIMSItemInfoForUpc" duration-ms="531" started-at="2017-09-01T18:21:09Z" finished-at="2017-09-01T18:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getIMSItemInfoForUpc -->
+        <test-method status="PASS" signature="getProductLocation()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="getProductLocation" duration-ms="593" started-at="2017-09-01T18:21:09Z" finished-at="2017-09-01T18:21:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProductLocation -->
+        <test-method status="PASS" signature="mismatch()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="mismatch" duration-ms="1467" started-at="2017-09-01T18:21:10Z" finished-at="2017-09-01T18:21:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mismatch -->
+        <test-method status="PASS" signature="offeringPrice()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="offeringPrice" duration-ms="220" started-at="2017-09-01T18:21:11Z" finished-at="2017-09-01T18:21:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- offeringPrice -->
+        <test-method status="PASS" signature="quantity()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="quantity" duration-ms="780" started-at="2017-09-01T18:21:12Z" finished-at="2017-09-01T18:21:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quantity -->
+        <test-method status="PASS" signature="recountDept()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="recountDept" duration-ms="500" started-at="2017-09-01T18:21:12Z" finished-at="2017-09-01T18:21:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recountDept -->
+        <test-method status="PASS" signature="recountReleaseDepartments()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="recountReleaseDepartments" duration-ms="546" started-at="2017-09-01T18:21:13Z" finished-at="2017-09-01T18:21:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recountReleaseDepartments -->
+        <test-method status="PASS" signature="recount_department_detail()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="recount_department_detail" duration-ms="500" started-at="2017-09-01T18:21:14Z" finished-at="2017-09-01T18:21:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recount_department_detail -->
+        <test-method status="PASS" signature="submitRecount()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="submitRecount" duration-ms="530" started-at="2017-09-01T18:21:14Z" finished-at="2017-09-01T18:21:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitRecount -->
+        <test-method status="PASS" signature="printRequest()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="printRequest" duration-ms="344" started-at="2017-09-01T18:21:15Z" finished-at="2017-09-01T18:21:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printRequest -->
+        <test-method status="PASS" signature="locationAPI()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="locationAPI" duration-ms="390" started-at="2017-09-01T18:21:15Z" finished-at="2017-09-01T18:21:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- locationAPI -->
+        <test-method status="PASS" signature="getProductOffering()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="getProductOffering" duration-ms="718" started-at="2017-09-01T18:21:15Z" finished-at="2017-09-01T18:21:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProductOffering -->
+        <test-method status="PASS" signature="basicInfo()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="basicInfo" duration-ms="235" started-at="2017-09-01T18:21:16Z" finished-at="2017-09-01T18:21:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicInfo -->
+        <test-method status="PASS" signature="auditDepartments()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="auditDepartments" duration-ms="452" started-at="2017-09-01T18:21:16Z" finished-at="2017-09-01T18:21:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- auditDepartments -->
+        <test-method status="PASS" signature="tagNameAndCountDByDepartmentID()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="tagNameAndCountDByDepartmentID" duration-ms="671" started-at="2017-09-01T18:21:17Z" finished-at="2017-09-01T18:21:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tagNameAndCountDByDepartmentID -->
+        <test-method status="PASS" signature="getDepartmentsForStore()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="getDepartmentsForStore" duration-ms="783" started-at="2017-09-01T18:21:17Z" finished-at="2017-09-01T18:21:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDepartmentsForStore -->
+        <test-method status="PASS" signature="Audits()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="Audits" duration-ms="1156" started-at="2017-09-01T18:21:18Z" finished-at="2017-09-01T18:21:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Audits -->
+        <test-method status="PASS" signature="countDepartmentLocation()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="countDepartmentLocation" duration-ms="906" started-at="2017-09-01T18:21:19Z" finished-at="2017-09-01T18:21:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- countDepartmentLocation -->
+        <test-method status="PASS" signature="auditSideCounter()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="auditSideCounter" duration-ms="624" started-at="2017-09-01T18:21:20Z" finished-at="2017-09-01T18:21:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- auditSideCounter -->
+        <test-method status="PASS" signature="annual()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="annual" duration-ms="799" started-at="2017-09-01T18:21:21Z" finished-at="2017-09-01T18:21:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- annual -->
+        <test-method status="PASS" signature="ALValidateZoneAisleSectionByID()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="ALValidateZoneAisleSectionByID" duration-ms="1750" started-at="2017-09-01T18:21:22Z" finished-at="2017-09-01T18:21:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ALValidateZoneAisleSectionByID -->
+        <test-method status="PASS" signature="recountRelease()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="recountRelease" duration-ms="563" started-at="2017-09-01T18:21:23Z" depends-on-methods="com.walmart.qe.tests.InventoryAuditServiceRunner.recountReleaseDepartments" finished-at="2017-09-01T18:21:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recountRelease -->
+        <test-method status="PASS" signature="submitRecountMismatch()[pri:0, instance:com.walmart.qe.tests.InventoryAuditServiceRunner@2cb4c3ab]" name="submitRecountMismatch" duration-ms="670" started-at="2017-09-01T18:21:24Z" depends-on-methods="com.walmart.qe.tests.InventoryAuditServiceRunner.recountRelease" finished-at="2017-09-01T18:21:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitRecountMismatch -->
+      </class> <!-- com.walmart.qe.tests.InventoryAuditServiceRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
