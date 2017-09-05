@@ -1,8 +1,14 @@
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -14,6 +20,7 @@ import org.xml.sax.helpers.DefaultHandler;
 public class GetFile {
 	File curDir;
 	String fileName;
+	String path;
 
 	public String getFileName() {
 		return fileName;
@@ -50,6 +57,7 @@ public class GetFile {
 			else if(f.isFile()){
 				if(f.getName().equalsIgnoreCase(getFileName())){
 					System.out.println("@@@@file found:"+f.getName());
+					path=f.getAbsolutePath();
 					return f;
 				}
 			}
@@ -59,7 +67,7 @@ public class GetFile {
 	
 	Map<String,Map<String,String>> parseFile(File file) throws FileNotFoundException{
 		FileInputStream in=new FileInputStream(file);
-		Map<String,Map<String,String>> report=new HashMap<>();
+		final Map<String,Map<String,String>> report=new HashMap<String,Map<String,String>>();
 		try{
 			SAXParserFactory factory=SAXParserFactory.newInstance();
 			SAXParser saxParser=factory.newSAXParser();
@@ -73,7 +81,8 @@ public class GetFile {
                     	 for(int i=0;i<attributes.getLength();i++){
                     		 map.put(attributes.getQName(i), attributes.getValue(i));
                     	 }
-                    	 report.put(qName, map);
+                    	 System.out.println("map:"+map);
+                    	 report.put(attributes.getValue("name"), map);
                      }
 			}
 
@@ -97,12 +106,76 @@ public class GetFile {
 		return report;
 		
 	}
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
+		int passed=0;
+		int skipped=0;
+		int failed=0;
+		Map<String,String>internalMap;
 		GetFile ob=new GetFile();
 		ob.setFileName("testng-results.xml");
 	 File f=ob.getFile();
 	 System.out.println(":"+f.getName());
-	 System.out.println(ob.parseFile(f));
+	Map<String,Map<String,String>>report=ob.parseFile(f);
+	Set<Entry<String,Map<String,String>>> set=report.entrySet();
+	Iterator<Entry<String,Map<String,String>>> itr=set.iterator();
+	while(itr.hasNext()) {
+		Map.Entry<String,Map<String,String>> entry=itr.next();
+		System.out.println(entry.getKey()+":"+entry.getValue());
+		internalMap=entry.getValue();
+		if(internalMap.get("status").equalsIgnoreCase("PASS")) {
+			passed++;
+		}
+		else if(internalMap.get("status").equalsIgnoreCase("FAIL")) {
+			failed++;
+		}
+		else if(internalMap.get("status").equalsIgnoreCase("SKIP")) {
+			skipped++;
+		}
+	}
+	
+	String html=ob.getHTMLReport(passed,skipped,failed);
+	System.out.println("$$$$$$$$:::::"+html);
+	System.out.println("passed:"+passed+"failed:"+failed+"skipped:"+skipped);
+	
+	ob.generateReport(html);
+	}
+
+	private void generateReport(String html) throws IOException {
+		File file =new File(path.substring(0, path.lastIndexOf('\\'))+"/customReport.html");
+		if(file.exists())
+			file.delete();
+		FileWriter fw=new FileWriter(file);
+		PrintWriter outwriter=new PrintWriter(fw);
+		outwriter.println(html);
+		outwriter.flush();
+			
+		
+	}
+
+	private  String getHTMLReport(int passed, int skipped, int failed) {
+		String HTML="<html><head>$head</head><body>$body</body></html>";
+		String script=" <script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>\r\n" + 
+				"    <script type=\"text/javascript\">\r\n" + 
+				"  google.charts.load('current', {'packages':['corechart']});\r\n" + 
+				"  google.charts.setOnLoadCallback(drawChart);"
+				+ " function drawChart() {\r\n" + 
+				"        var data = new google.visualization.DataTable();";
+		
+		String dataforMap="data.addRows(['passed',"+passed+"],['failed',"+failed+"],['skipped',"+skipped+"]);";
+		String options=" var options = {'title':'Test Run ',\r\n" + 
+				"                       'width':400,\r\n" + 
+				"                       'height':300};"
+				+ " var chart = new google.visualization.PieChart(document.getElementById('chart_div'));\r\n" + 
+				"        chart.draw(data, options);\r\n" + 
+				"      }\r\n" + 
+				"    </script>\r\n" ;
+		
+		String repBody=" <div id=\"chart_div\"></div>";
+		HTML=HTML.replace("$head", script+dataforMap+options);
+		HTML=HTML.replace("$body",repBody);
+		
+		
+		return HTML;
 	}
 
 	private File getFile() {
