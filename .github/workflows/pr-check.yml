@@ -17,4 +17,5 @@ jobs:
 
       - name: Check for new tests
         run: |
-           git diff --name-only master...origin/$GITHUB_HEAD_REF | grep "androidTest"
+           git fetch --all
+           git diff --name-only origin/master...$GITHUB_HEAD_REF | grep "androidTest"
