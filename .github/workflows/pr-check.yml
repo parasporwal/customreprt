@@ -14,7 +14,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Check for new tests
-        run: |
+        run: 
+          git checkout $GITHUB_HEAD_REF
           if git diff master...$GITHUB_HEAD_REF | grep "androidTest"; then
             echo "New test files added to androidTest folder"
             exit 1
