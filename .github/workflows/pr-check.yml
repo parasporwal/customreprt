@@ -15,7 +15,7 @@ jobs:
 
       - name: Check for new tests
         run: |
-          if git diff master..$GITHUB_HEAD_REF | grep "androidTest"; then
+          if git diff master...$GITHUB_HEAD_REF | grep "androidTest"; then
             echo "New test files added to androidTest folder"
             exit 1
           fi
