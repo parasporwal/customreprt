@@ -16,17 +16,14 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Check for new tests
-        run: 
-          if git diff master...$GITHUB_HEAD_REF | grep "androidTest"; then
+        run: |
+          if git diff --name-only master...$GITHUB_HEAD_REF | grep -q "androidTest"; then
             echo "New test files added to androidTest folder"
             exit 1
           fi
 
-          if git diff --name-only master..$GITHUB_HEAD_REF | xargs grep -q "@Test"; then
+          if git diff --name-only master...$GITHUB_HEAD_REF | xargs grep -q "@Test"; then
             echo "New test methods added to existing files in androidTest folder"
             exit 1
           fi
-
-
-
 
