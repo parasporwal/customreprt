@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 2
 
       - name: Check for new tests
         run: |
@@ -24,7 +27,5 @@ jobs:
             echo "New test methods added to existing files in androidTest folder"
             exit 1
           fi
-
-
 
 
