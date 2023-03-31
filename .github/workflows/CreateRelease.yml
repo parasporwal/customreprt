@@ -14,7 +14,8 @@ on:
         default: "In Sea Ph Mea"
 
 jobs:
-  name: Echo
-   steps:
-     -name: echo print
-       run: echo $${github.actor}}
+  Echo:
+  runs-on: ubuntu-latest
+  steps:
+    - name: echo print
+        run:| echo $${github.actor}}
