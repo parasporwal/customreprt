@@ -16,10 +16,19 @@ on:
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
+    outputs:
+      BRANCH: ${{steps.branch.outputs.BRANCHNAME}}
     steps:
+      - name: Checkout Code
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      - name: Initialize Mandatory Git Config
+      - run: |
+          git config user.name "Release Engineering"
+          git config user.email releaseengineering.svc@hotstar.com
+      - name: Creating branch
+      - run: git checkout -b release-`date+%y-%m-%d`
+      - name: Push new branch
+      - run: git push origin release-`date+%y-%m-%d`
+      - name: Getting Branch Name
+        id: branch
+        run: echo "BRANCHNAME=release-`date+%y-%m-%d`" >> $GITHUB_OUTPUT
