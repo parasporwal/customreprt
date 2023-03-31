@@ -1,0 +1,21 @@
+name: Create Release
+on:
+  workflow_dispatch:
+    inputs:
+      Enter Branch:
+        description: Enter branch name
+        required: false
+        type: boolean
+        default: false
+      Build_Business:
+        description: Enter markets
+        required: false
+        type: String
+        default: "In Sea Ph Mea"
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo print
+    - run: echo $${github.actor}}
