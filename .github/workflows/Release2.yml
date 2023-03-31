@@ -32,8 +32,6 @@ jobs:
       - name: Getting Branch Name
         id: branch
         run: echo "BRANCHNAME=release-`date +%y-%m-%d`" >> $GITHUB_OUTPUT
-      - name: Output Github
-        run: echo ${{GITHUB_OUTPUT}}
       - id: step1
         run: echo "test=hello1" >> "$GITHUB_OUTPUT"  
       - id: step2
