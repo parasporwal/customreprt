@@ -1,0 +1,16 @@
+name: Create Release
+on:
+  workflow_dispatch:
+    Inputs:
+      Enter Branch:
+        description: Enter branch name
+        required: false
+        type: boolean
+        default: false
+      Build_Business:
+        description: Enter markets
+        required: false
+        type: String
+        default: "In Sea Ph Mea"
+
+
