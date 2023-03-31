@@ -24,7 +24,7 @@ jobs:
       - name: Initialize Mandatory Git Config
          run:|
           git config user.name "Release Engineering"
-          git config user.email releaseengineering.svc@hotstar.com
+          git config user.email releaseengineering.svc@gmail.com
       - name: Creating branch
         run: git checkout -b release-`date+%y-%m-%d`
       - name: Push new branch
