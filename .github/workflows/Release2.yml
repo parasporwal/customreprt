@@ -14,7 +14,7 @@ on:
         type: String
         default: "In Sea Ph Mea"
 jobs:
-  check-bats-version:
+  create-release-branch:
     runs-on: ubuntu-latest
     outputs:
       BRANCH: ${{steps.branch.outputs.BRANCHNAME}}
