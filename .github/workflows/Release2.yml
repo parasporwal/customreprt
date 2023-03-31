@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       BRANCH: ${{steps.branch.outputs.BRANCHNAME}}
+      output1: ${{steps.step1.outputs.test}}
+      output2: ${{steps.step1.outputs.test}}  
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -32,3 +34,16 @@ jobs:
         run: echo "BRANCHNAME=release-`date +%y-%m-%d`" >> $GITHUB_OUTPUT
       - name: Output Github
         run: echo ${{GITHUB_OUTPUT}}
+      - id: step1
+        run: echo "test=hello1" >> "$GITHUB_OUTPUT"  
+      - id: step2
+        run: echo "test=hello2" >> "$GITHUB_OUTPUT"        
+  job2:
+    runs-on: ubuntu-latest
+    needs: create-release-branch
+    steps:
+     - env:
+        OUTPUT1: ${{needs.create-release-branch.outputs.output1}}
+        OUTPUT2: ${{needs.create-release-branch.outputs.output2}}
+        BRANCH: ${{needs.create-release-branch.outputs.BRANCH}}
+       run: echo "$OUTPUT1 $OUTPUT2 $BRANCH"        
