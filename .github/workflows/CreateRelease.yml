@@ -13,4 +13,8 @@ on:
         type: String
         default: "In Sea Ph Mea"
 
-
+jobs:
+  name: Echo
+   steps:
+     -name: echo print
+       run: echo $${github.actor}}
