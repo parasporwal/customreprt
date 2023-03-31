@@ -1,0 +1,32 @@
+name: first
+run-name: ${{ github.actor }} is learning GitHub Actions
+on:
+  workflow_dispatch:
+    inputs:
+        Enter Branch:
+          description: Enter branch name
+          required: false
+          type: boolean
+          default: false
+        Build_Business:
+          description: Enter markets
+          required: false
+          type: String
+          default: "In Sea Ph Mea"
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    outputs:
+      BRANCH: ${{steps.branch.outputs.BRANCHNAME}}
+    steps:
+      - name: Checkout Code
+      - uses: actions/checkout@v3
+      - name: Initialize Mandatory Git Config
+         run: git config --list
+      - name: Creating branch
+         run: git checkout -b release-`date+%y-%m-%d`
+      - name: Push new branch
+         run: git push origin release-`date+%y-%m-%d`
+      - name: Getting Branch Name
+         id: branch
+         run: echo "BRANCHNAME=release-`date+%y-%m-%d`" >> $GITHUB_OUTPUT
