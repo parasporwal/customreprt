@@ -3,10 +3,10 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   workflow_dispatch:
     inputs:
-      Enter Branch:
+      Enter_Branch:
         description: Enter branch name
         required: false
-        type: boolean
+        type: String
         default: false
       Build_Business:
         description: Enter markets
@@ -24,9 +24,11 @@ jobs:
       - name: Initialize Mandatory Git Config
         run: echo "HI"
       - name: Creating branch
-        run: git checkout -b release-`date +%y-%m-%d`
+        run: git checkout -b ${{inputs.Enter_Branch}}
       - name: Push new branch
-        run: git push origin release-`date +%y-%m-%d`
+        run: git push origin ${{inputs.Enter_Branch}}
       - name: Getting Branch Name
         id: branch
         run: echo "BRANCHNAME=release-`date +%y-%m-%d`" >> $GITHUB_OUTPUT
+      - name: Output Github
+        run: echo $GITHUB_OUTPUT   
