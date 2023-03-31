@@ -22,13 +22,11 @@ jobs:
       - name: Checkout Code
       - uses: actions/checkout@v3
       - name: Initialize Mandatory Git Config
-         run:|
-          git config user.name "Release Engineering"
-          git config user.email releaseengineering.svc@gmail.com
+         run: git config --list
       - name: Creating branch
-        run: git checkout -b release-`date+%y-%m-%d`
+         run: git checkout -b release-`date+%y-%m-%d`
       - name: Push new branch
-        run: git push origin release-`date+%y-%m-%d`
+         run: git push origin release-`date+%y-%m-%d`
       - name: Getting Branch Name
-        id: branch
-        run: echo "BRANCHNAME=release-`date+%y-%m-%d`" >> $GITHUB_OUTPUT
+         id: branch
+         run: echo "BRANCHNAME=release-`date+%y-%m-%d`" >> $GITHUB_OUTPUT
