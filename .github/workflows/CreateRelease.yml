@@ -14,8 +14,8 @@ on:
         default: "In Sea Ph Mea"
 
 jobs:
-  Echo:
-  runs-on: ubuntu-latest
-  steps:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
     - name: echo print
-        run:| echo $${github.actor}}
+    - run: echo $${github.actor}}
