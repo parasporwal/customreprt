@@ -16,5 +16,5 @@ jobs:
           baseDate="2023-03-27"
           today=$(date -u +%s)
           start=$(date -u -d "$baseDate" +%s)
-          echo $today >> $GITHUB_OUTPUT
-          echo $start >> $GITHUB_OUTPUT
+          echo $today
+          echo $start
